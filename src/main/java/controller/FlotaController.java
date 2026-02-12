@@ -176,7 +176,7 @@ public class FlotaController {
     
     public void crearCarpetaDatos() {
 
-        File carpeta = new File("business_data");
+        File carpeta = new File("carpeta_datos");
 
         if (!carpeta.exists()) {
             carpeta.mkdir();
@@ -187,14 +187,14 @@ public class FlotaController {
 
         try {
 
-            FileWriter fw = new FileWriter("business_data/flota.txt");
+            FileWriter fw = new FileWriter("carpeta_datos/flota.txt");
 
             for (int i = 0; i < flota.size(); i++) {
                 Camion c = flota.get(i);
 
                 fw.write(c.toString() + "\n");
 
-                FileWriter paquetes = new FileWriter("business_data/" + c.getMatricula() + ".txt");
+                FileWriter paquetes = new FileWriter("carpeta_datos/" + c.getMatricula() + ".txt");
 
                 for (int j = 0; j < c.getListaPaquetes().size(); j++) {
                     paquetes.write(c.getListaPaquetes().get(j).toString() + "\n");
@@ -215,7 +215,7 @@ public class FlotaController {
 
         try {
 
-            File f = new File("business_data/flota.txt");
+            File f = new File("carpeta_datos/flota.txt");
 
             if (!f.exists()) return;
 
@@ -229,7 +229,7 @@ public class FlotaController {
                 Camion c = new Camion(partes[0], partes[1], Double.parseDouble(partes[2]));
                 flota.add(c);
 
-                File paquetes = new File("business_data/" + partes[0] + ".txt");
+                File paquetes = new File("carpeta_datos/" + partes[0] + ".txt");
 
                 if (paquetes.exists()) {
 
