@@ -1,0 +1,4 @@
+model\Paquete.class
+app\Main.class
+model\Camion.class
+service\FlotaService.class
