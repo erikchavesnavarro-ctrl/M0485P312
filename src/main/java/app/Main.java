@@ -11,7 +11,15 @@ import controller.FlotaController;
  *
  * @author erikc
  */
+
 public class Main {
+    /*
+    Hola Maria, al final he hecho el trabajo solo ya que el Victor me ha dicho textualmente que se iba a junio,
+    he intentado hacerlo lo mejor posible, debería haber preguntado más en clase,
+    lo que esto de que no iba a hacer el trabajo me lo dijo este miércoles que había huelga.
+    */
+    
+    
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -20,7 +28,7 @@ public class Main {
         servicio.crearCarpetaDatos();
         servicio.cargarDatos();
 
-        int opcion = -1;
+        int opcion = 0;
 
         while (opcion != 8) {
 

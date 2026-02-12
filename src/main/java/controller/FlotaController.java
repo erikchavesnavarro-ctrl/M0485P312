@@ -6,6 +6,7 @@ package controller;
 
 import java.io.File;
 import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Scanner;
 import model.Camion;
 import model.Paquete;
@@ -205,7 +206,7 @@ public class FlotaController {
             fw.close();
             return "Datos guardados correctamente";
 
-        } catch (Exception e) {
+        } catch (IOException e) {
             return "Error al guardar datos";
         }
     }
@@ -244,7 +245,7 @@ public class FlotaController {
                 }
             }
 
-        } catch (Exception e) {
+        } catch (IOException e) {
             System.out.println("Error cargando datos");
         }
     }

@@ -1,4 +1,4 @@
 model\Paquete.class
 app\Main.class
+controller\FlotaController.class
 model\Camion.class
-service\FlotaService.class
